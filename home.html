@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0c3857;
+      margin: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+    
+    .form-container {
+      width: 100%;
+      padding-top: center;
+      max-width: 400px;
+      background: #d7b348;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(205, 13, 13, 0.1);
+      margin: auto;
+
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #948e8e;
+      outline: none;
+    }
+    input.error, textarea.error {
+      border-color: red;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background: #2480f0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .error-msg {
+      color: red;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+    .success-msg {
+      color: green;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Contact Us</h2>
+  <form id="contactForm" novalidate>
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name">
+    <div id="nameError" class="error-msg"></div>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email">
+    <div id="emailError" class="error-msg"></div>
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    <div id="messageError" class="error-msg"></div>
+
+    <button type="submit">Submit</button>
+    <div id="successMessage" class="success-msg"></div>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
